@@ -1,16 +1,36 @@
+@font-face {
+  font-family: 'Digimon';
+  src: url('./assets/digimon.ttf') format('opentype');
+  font-weight: normal;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-header {
-  padding: 1rem
+body{
+  background-image: url('./assets/back.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Digimon';
+
 }
 
-body {
-  height: 80%;
-  font-family: 'Roboto', sans-serif;
+header {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: 'Digimon';
+  font-size: 4rem;
+  color:azure;
+  text-shadow: 3px 2px 3px black;
+  margin: 0 2rem;
 }
 
 #logo {
@@ -19,63 +39,91 @@ body {
 
 main {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: auto;
-  margin-bottom: 2.7rem;
-  padding: 2rem;
+  margin-bottom: 4rem;
+  padding: 1rem;
   width: 80%;
-  height: 70vh;
-  background-color: rgba(51, 114, 230, 0.637);
-  border-radius: 120px;
+
+  background-color: rgba(239, 244, 252, 0.637);
+  box-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  font-family: 'Digimon';
 }
 
-.find {
+.digimonPic {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-transform: uppercase;
+  justify-content: center;
 }
 
-.find button{
-  background-color: coral;
-  color: aliceblue;
-  padding: 0.5rem;
+.digimon img {
+  margin: 0.2rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 5px;
-  transition: all 0.5s;
+  border: 1px solid #517cf1;
+  box-shadow: 1px 1px 1px black;
+  transition: all 0.6s;
   cursor: pointer;
-
-  margin-top: 1rem;
 }
 
-.find button:hover{
-  
-  -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+.digimonInfos {
+  margin: auto;
+  font-size: 0.4rem;
+  text-align: center;
+  background-color: #517cf1;
+  box-shadow: 1px 1px 1px black;
+  width: 4rem;
+  border-radius: 5px;
+  padding: 0.2rem;
+
+  display: none;
 }
 
-#cardVerso {
-  height: 20rem;
-  margin: 0 4rem;
+.digimon:hover .digimonInfos {
+  display: block;
+}
+
+.digimon:hover {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+
+
+}
+
+.digimonNome {
+  font-size: 0.5rem;
+  color: rgb(212, 103, 31);
+  text-shadow: 1px 1px 1px black;
+}
+
+.digimonNivel {
+  font-size: 0.5rem;
+  color: rgb(223, 210, 32);
+  text-shadow: 1px 1px 1px black;
 }
 
 footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 1.5rem;
 
-  background-color: blanchedalmond;
-
+  background: rgb(241,137,8);
   color: aliceblue;
 }
 
-footer>div {
-  border-radius: 6px 12px 6px 12px;
+footer > div {
+  border-radius: 12px;
   background-color: rgb(58, 117, 206);
-  padding: 0 1rem;
-}
+  width: 50vw;
 
+text-align: center;
+}
 
 footer a {
   text-decoration: none;
@@ -83,15 +131,13 @@ footer a {
   transition: all 0.5s;
   cursor: pointer;
   height: 1.5rem;
-
 }
 
 footer i {
-  padding: 0 0.2rem;
+  padding: 0 0.25rem;
 }
 
 footer i:hover {
-  color: rgba(0, 0, 255, 0.521);
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
