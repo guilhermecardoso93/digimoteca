@@ -20,19 +20,21 @@ body{
 
 header {
   display: flex;
-  align-self: center;
   justify-content: center;
-  align-content: center;
   margin: auto;
-  padding: 1rem;
+  gap:2rem;
 }
 
 header h1 {
+  display: flex;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+
   font-family: 'Digimon';
   font-size: 4rem;
   color:azure;
   text-shadow: 3px 2px 3px black;
-  margin: 0 2rem;
 }
 
 #logo {
